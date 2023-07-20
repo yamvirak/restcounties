@@ -1,0 +1,360 @@
+<mat-dialog-content class="custom-dialog-content" scrollbar>
+    <div class="flex flex-col sm:flex-row gap-2">
+        <div style="display: flex;">
+            <div class="pr-0 md:pr-5 w-full max-w-60">
+                <img style="width: 90%;text-align: center;" src="{{data?.flags?.png}}" alt=""><br><br>
+            </div>
+            <div class="w-full">
+                <div><b>Name : </b><span> {{data?.name?.official}} ({{data?.name?.common}})</span> </div>
+                <div><b>CCA2 : </b><span>{{data?.cca2}}</span> </div>
+                <div><b>CCA3 : </b><span>{{data?.cca3}}</span> </div>
+                <div><b>CCN3 : </b><span>{{data?.ccn3}}</span> </div>
+                <div><b>CIOC : </b><span> {{data?.cioc}}</span> </div>
+                <div><b>Independent : </b><span>{{data?.independent}}</span> </div>
+                <div><b>Status : </b><span> {{data?.status}}</span> </div>
+                <div><b>UN Member : </b> <span>{{data.unMember}}</span></div>
+                <div *ngIf="data?.currencies"><b>Currencies : </b>
+                    <span *ngIf="data?.currencies?.EUR">{{data?.currencies?.EUR?.name}}
+                        ({{data?.currencies?.EUR?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.USD">{{data?.currencies?.USD?.name}}
+                        ({{data?.currencies?.USD?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.JOD">{{data?.currencies?.JOD?.name}}
+                        ({{data?.currencies?.JOD?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.RSD">{{data?.currencies?.RSD?.name}}
+                        ({{data?.currencies?.RSD?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.BMD">{{data?.currencies?.BMD?.name}}
+                        ({{data?.currencies?.BMD?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.BOB">{{data?.currencies?.BOB?.name}}
+                        ({{data?.currencies?.BOB?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.LYD">{{data?.currencies?.LYD?.name}}
+                        ({{data?.currencies?.LYD?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.XOF">{{data?.currencies?.XOF?.name}}
+                        ({{data?.currencies?.XOF?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.AMD">{{data?.currencies?.AMD?.name}}
+                        ({{data?.currencies?.AMD?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.MUR">{{data?.currencies?.MUR?.name}}
+                        ({{data?.currencies?.MUR?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.MVR">{{data?.currencies?.MVR?.name}}
+                        ({{data?.currencies?.MVR?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.MKD">{{data?.currencies?.MKD?.name}}
+                        ({{data?.currencies?.MKD?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.ETB">{{data?.currencies?.ETB?.name}}
+                        ({{data?.currencies?.ETB?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.DKK">{{data?.currencies?.DKK?.name}}
+                        ({{data?.currencies?.DKK?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.IQD">{{data?.currencies?.IQD?.name}}
+                        ({{data?.currencies?.IQD?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.GTQ">{{data?.currencies?.GTQ?.name}}
+                        ({{data?.currencies?.GTQ?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.TTD">{{data?.currencies?.TTD?.name}}
+                        ({{data?.currencies?.TTD?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.PEN">{{data?.currencies?.PEN?.name}}
+                        ({{data?.currencies?.PEN?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.SRD">{{data?.currencies?.SRD?.name}}
+                        ({{data?.currencies?.SRD?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.SEK">{{data?.currencies?.SEK?.name}}
+                        ({{data?.currencies?.SEK?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.XPF">{{data?.currencies?.XPF?.name}}
+                        ({{data?.currencies?.XPF?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.XOF">{{data?.currencies?.XOF?.name}}
+                        ({{data?.currencies?.XOF?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.FKP">{{data?.currencies?.FKP?.name}}
+                        ({{data?.currencies?.FKP?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.ZWL">{{data?.currencies?.ZWL?.name}}
+                        ({{data?.currencies?.ZWL?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.SAR">{{data?.currencies?.SAR?.name}}
+                        ({{data?.currencies?.SAR?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.AED">{{data?.currencies?.AED?.name}}
+                        ({{data?.currencies?.AED?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.AFN">{{data?.currencies?.AFN?.name}}
+                        ({{data?.currencies?.AFN?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.PAB">{{data?.currencies?.PAB?.name}}
+                        ({{data?.currencies?.PAB?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.SYP">{{data?.currencies?.SYP?.name}}
+                        ({{data?.currencies?.SYP?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.VUV">{{data?.currencies?.VUV?.name}}
+                        ({{data?.currencies?.VUV?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.HNL">{{data?.currencies?.HNL?.name}}
+                        ({{data?.currencies?.HNL?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.AUD">{{data?.currencies?.AUD?.name}}
+                        ({{data?.currencies?.AUD?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.CLP">{{data?.currencies?.CLP?.name}}
+                        ({{data?.currencies?.CLP?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.XCD">{{data?.currencies?.XCD?.name}}
+                        ({{data?.currencies?.XCD?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.MXN">{{data?.currencies?.MXN?.name}}
+                        ({{data?.currencies?.MXN?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.CNY">{{data?.currencies?.CNY?.name}}
+                        ({{data?.currencies?.CNY?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.SSP">{{data?.currencies?.SSP?.name}}
+                        ({{data?.currencies?.SSP?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.SZL">{{data?.currencies?.SZL?.name}}
+                        ({{data?.currencies?.SZL?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.UZS">{{data?.currencies?.UZS?.name}}
+                        ({{data?.currencies?.UZS?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.IDR">{{data?.currencies?.IDR?.name}}
+                        ({{data?.currencies?.IDR?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.PYG">{{data?.currencies?.PYG?.name}}
+                        ({{data?.currencies?.PYG?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.PLN">{{data?.currencies?.PLN?.name}}
+                        ({{data?.currencies?.PLN?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.BAM">{{data?.currencies?.BAM?.name}}
+                        ({{data?.currencies?.BAM?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.CAD">{{data?.currencies?.CAD?.name}}
+                        ({{data?.currencies?.CAD?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.BRL">{{data?.currencies?.BRL?.name}}
+                        ({{data?.currencies?.BRL?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.MRU">{{data?.currencies?.MRU?.name}}
+                        ({{data?.currencies?.MRU?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.ILS">{{data?.currencies?.ILS?.name}}
+                        ({{data?.currencies?.ILS?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.ANG">{{data?.currencies?.ANG?.name}}
+                        ({{data?.currencies?.ANG?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.BND">{{data?.currencies?.BND?.name}}
+                        ({{data?.currencies?.BND?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.AOA">{{data?.currencies?.AOA?.name}}
+                        ({{data?.currencies?.AOA?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.BYN">{{data?.currencies?.BYN?.name}}
+                        ({{data?.currencies?.BYN?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.TRY">{{data?.currencies?.TRY?.name}}
+                        ({{data?.currencies?.TRY?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.GIP">{{data?.currencies?.GIP?.name}}
+                        ({{data?.currencies?.GIP?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.BTN">{{data?.currencies?.BTN?.name}}
+                        ({{data?.currencies?.BTN?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.VES">{{data?.currencies?.VES?.name}}
+                        ({{data?.currencies?.VES?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.QAR">{{data?.currencies?.QAR?.name}}
+                        ({{data?.currencies?.QAR?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.CZK">{{data?.currencies?.CZK?.name}}
+                        ({{data?.currencies?.CZK?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.KWD">{{data?.currencies?.KWD?.name}}
+                        ({{data?.currencies?.KWD?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.INR">{{data?.currencies?.INR?.name}}
+                        ({{data?.currencies?.INR?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.NZD">{{data?.currencies?.NZD?.name}}
+                        ({{data?.currencies?.NZD?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.JMD">{{data?.currencies?.JMD?.name}}
+                        ({{data?.currencies?.JMD?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.KYD">{{data?.currencies?.KYD?.name}}
+                        ({{data?.currencies?.KYD?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.PKR">{{data?.currencies?.PKR?.name}}
+                        ({{data?.currencies?.PKR?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.KZT">{{data?.currencies?.KZT?.name}}
+                        ({{data?.currencies?.KZT?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.BHD">{{data?.currencies?.BHD?.name}}
+                        ({{data?.currencies?.BHD?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.FJD">{{data?.currencies?.FJD?.name}}
+                        ({{data?.currencies?.FJD?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.ISK">{{data?.currencies?.ISK?.name}}
+                        ({{data?.currencies?.ISK?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.MMK">{{data?.currencies?.MMK?.name}}
+                        ({{data?.currencies?.MMK?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.BDT">{{data?.currencies?.BDT?.name}}
+                        ({{data?.currencies?.BDT?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.PHP">{{data?.currencies?.PHP?.name}}
+                        ({{data?.currencies?.PHP?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.NPR">{{data?.currencies?.NPR?.name}}
+                        ({{data?.currencies?.NPR?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.YER">{{data?.currencies?.YER?.name}}
+                        ({{data?.currencies?.YER?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.KRW">{{data?.currencies?.KRW?.name}}
+                        ({{data?.currencies?.KRW?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.OMR">{{data?.currencies?.OMR?.name}}
+                        ({{data?.currencies?.OMR?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.ERN">{{data?.currencies?.ERN?.name}}
+                        ({{data?.currencies?.ERN?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.TZS">{{data?.currencies?.TZS?.name}}
+                        ({{data?.currencies?.TZS?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.SBD">{{data?.currencies?.SBD?.name}}
+                        ({{data?.currencies?.SBD?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.KES">{{data?.currencies?.KES?.name}}
+                        ({{data?.currencies?.KES?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.DOP">{{data?.currencies?.DOP?.name}}
+                        ({{data?.currencies?.DOP?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.GBP">{{data?.currencies?.GBP?.name}}
+                        ({{data?.currencies?.GBP?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.RWF">{{data?.currencies?.RWF?.name}}
+                        ({{data?.currencies?.RWF?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.TWD">{{data?.currencies?.TWD?.name}}
+                        ({{data?.currencies?.TWD?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.GYD">{{data?.currencies?.GYD?.name}}
+                        ({{data?.currencies?.GYD?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.SCR">{{data?.currencies?.SCR?.name}}
+                        ({{data?.currencies?.SCR?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.KPW">{{data?.currencies?.KPW?.name}}
+                        ({{data?.currencies?.KPW?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.BWP">{{data?.currencies?.BWP?.name}}
+                        ({{data?.currencies?.BWP?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.KHR">{{data?.currencies?.KHR?.name}}
+                        ({{data?.currencies?.KHR?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.BBD">{{data?.currencies?.BBD?.name}}
+                        ({{data?.currencies?.BBD?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.COP">{{data?.currencies?.COP?.name}}
+                        ({{data?.currencies?.COP?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.UAH">{{data?.currencies?.UAH?.name}}
+                        ({{data?.currencies?.UAH?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.XOF">{{data?.currencies?.XOF?.name}}
+                        ({{data?.currencies?.XOF?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.NAD">{{data?.currencies?.NAD?.name}}
+                        ({{data?.currencies?.NAD?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.XAF">{{data?.currencies?.XAF?.name}}
+                        ({{data?.currencies?.XAF?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.TOP">{{data?.currencies?.TOP?.name}}
+                        ({{data?.currencies?.TOP?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.ARS">{{data?.currencies?.ARS?.name}}
+                        ({{data?.currencies?.ARS?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.CRC">{{data?.currencies?.CRC?.name}}
+                        ({{data?.currencies?.CRC?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.GHS">{{data?.currencies?.GHS?.name}}
+                        ({{data?.currencies?.GHS?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.EGP">{{data?.currencies?.EGP?.name}}
+                        ({{data?.currencies?.EGP?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.CUC">{{data?.currencies?.CUC?.name}}
+                        ({{data?.currencies?.CUC?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.HUF">{{data?.currencies?.HUF?.name}}
+                        ({{data?.currencies?.HUF?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.BZD">{{data?.currencies?.BZD?.name}}
+                        ({{data?.currencies?.BZD?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.BSD">{{data?.currencies?.BSD?.name}}
+                        ({{data?.currencies?.BSD?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.AWG">{{data?.currencies?.AWG?.name}}
+                        ({{data?.currencies?.AWG?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.STN">{{data?.currencies?.STN?.name}}
+                        ({{data?.currencies?.STN?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.RUB">{{data?.currencies?.RUB?.name}}
+                        ({{data?.currencies?.RUB?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.NIO">{{data?.currencies?.NIO?.name}}
+                        ({{data?.currencies?.NIO?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.TND">{{data?.currencies?.TND?.name}}
+                        ({{data?.currencies?.TND?.symbol}})</span>
+                    <span *ngIf="data?.currencies?.CDF">{{data?.currencies?.CDF?.name}}
+                        ({{data?.currencies?.CDF?.symbol}})</span>
+                </div>
+                <div *ngIf="data?.name?.nativeName">
+                    <b>Native Name : </b><br>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.ara">- ara:
+                        {{data?.name?.nativeName?.ara?.official}} ( {{data?.name?.nativeName?.ara?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.grn">- grn:
+                        {{data?.name?.nativeName?.grn?.official}} ( {{data?.name?.nativeName?.grn?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.que">- que:
+                        {{data?.name?.nativeName?.que?.official}} ( {{data?.name?.nativeName?.que?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.spa">- spa:
+                        {{data?.name?.nativeName?.spa?.official}} ( {{data?.name?.nativeName?.spa?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.zho">- zho:
+                        {{data?.name?.nativeName?.zho?.official}} ( {{data?.name?.nativeName?.zho?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.urd">- urd:
+                        {{data?.name?.nativeName?.urd?.official}} ( {{data?.name?.nativeName?.urd?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.tur">- tur:
+                        {{data?.name?.nativeName?.tur?.official}} ( {{data?.name?.nativeName?.tur?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.swe">- swe:
+                        {{data?.name?.nativeName?.swe?.official}} ( {{data?.name?.nativeName?.swe?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.srp">- srp:
+                        {{data?.name?.nativeName?.srp?.official}} ( {{data?.name?.nativeName?.srp?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.slk">- slk:
+                        {{data?.name?.nativeName?.slk?.official}} ( {{data?.name?.nativeName?.slk?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.rus">- rus:
+                        {{data?.name?.nativeName?.rus?.official}} ( {{data?.name?.nativeName?.rus?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.por">- por:
+                        {{data?.name?.nativeName?.por?.official}} ( {{data?.name?.nativeName?.por?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.pol">- pol:
+                        {{data?.name?.nativeName?.pol?.official}} ( {{data?.name?.nativeName?.pol?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.per">- per:
+                        {{data?.name?.nativeName?.per?.official}} ( {{data?.name?.nativeName?.per?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.nld">- nld:
+                        {{data?.name?.nativeName?.nld?.official}} ( {{data?.name?.nativeName?.nld?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.kor">- kor:
+                        {{data?.name?.nativeName?.kor?.official}} ( {{data?.name?.nativeName?.kor?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.jpn">- jpn:
+                        {{data?.name?.nativeName?.jpn?.official}} ( {{data?.name?.nativeName?.jpn?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.ita">- ita:
+                        {{data?.name?.nativeName?.ita?.official}} ( {{data?.name?.nativeName?.ita?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.hun">- hun:
+                        {{data?.name?.nativeName?.hun?.official}} ( {{data?.name?.nativeName?.hun?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.ita">- ita:
+                        {{data?.name?.nativeName?.ita?.official}} ( {{data?.name?.nativeName?.ita?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.hrv">- hrv:
+                        {{data?.name?.nativeName?.hrv?.official}} ( {{data?.name?.nativeName?.hrv?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.fra">- fra:
+                        {{data?.name?.nativeName?.fra?.official}} ( {{data?.name?.nativeName?.fra?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.fin">- fin:
+                        {{data?.name?.nativeName?.fin?.official}} ( {{data?.name?.nativeName?.fin?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.est">- est:
+                        {{data?.name?.nativeName?.est?.official}} ( {{data?.name?.nativeName?.est?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.deu">- deu:
+                        {{data?.name?.nativeName?.deu?.official}} ( {{data?.name?.nativeName?.deu?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.cym">- cym:
+                        {{data?.name?.nativeName?.cym?.official}} ( {{data?.name?.nativeName?.cym?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.ces">- ces:
+                        {{data?.name?.nativeName?.ces?.official}} ( {{data?.name?.nativeName?.ces?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.bre">- bre:
+                        {{data?.name?.nativeName?.bre?.official}} ( {{data?.name?.nativeName?.bre?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.cat">- cat:
+                        {{data?.name?.nativeName?.cat?.official}} ( {{data?.name?.nativeName?.cat?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.eng">- eng:
+                        {{data?.name?.nativeName?.eng?.official}} ( {{data?.name?.nativeName?.eng?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.hye">- hye:
+                        {{data?.name?.nativeName?.hye?.official}} ( {{data?.name?.nativeName?.hye?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.div">- div:
+                        {{data?.name?.nativeName?.div?.official}} ( {{data?.name?.nativeName?.div?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.smo">- smo:
+                        {{data?.name?.nativeName?.smo?.official}} ( {{data?.name?.nativeName?.smo?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.mkd">- mkd:
+                        {{data?.name?.nativeName?.mkd?.official}} ( {{data?.name?.nativeName?.mkd?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.amh">- amh:
+                        {{data?.name?.nativeName?.amh?.official}} ( {{data?.name?.nativeName?.amh?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.kal">- kal:
+                        {{data?.name?.nativeName?.kal?.official}} ( {{data?.name?.nativeName?.kal?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.arc">- arc:
+                        {{data?.name?.nativeName?.arc?.official}} ( {{data?.name?.nativeName?.arc?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.ckb">- ckb:
+                        {{data?.name?.nativeName?.ckb?.official}} ( {{data?.name?.nativeName?.ckb?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.aym">- aym:
+                        {{data?.name?.nativeName?.aym?.official}} ( {{data?.name?.nativeName?.aym?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.cha">- cha:
+                        {{data?.name?.nativeName?.cha?.official}} ( {{data?.name?.nativeName?.cha?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.bwg">- bwg:
+                        {{data?.name?.nativeName?.bwg?.official}} ( {{data?.name?.nativeName?.bwg?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.kck">- kck:
+                        {{data?.name?.nativeName?.kck?.official}} ( {{data?.name?.nativeName?.kck?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.khi">- khi:
+                        {{data?.name?.nativeName?.khi?.official}} ( {{data?.name?.nativeName?.khi?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.nde">- nde:
+                        {{data?.name?.nativeName?.nde?.official}} ( {{data?.name?.nativeName?.nde?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.nya">- nya:
+                        {{data?.name?.nativeName?.nya?.official}} ( {{data?.name?.nativeName?.nya?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.sna">- sna:
+                        {{data?.name?.nativeName?.sna?.official}} ( {{data?.name?.nativeName?.sna?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.sot">- sot:
+                        {{data?.name?.nativeName?.sot?.official}} ( {{data?.name?.nativeName?.sot?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.toi">- toi:
+                        {{data?.name?.nativeName?.toi?.official}} ( {{data?.name?.nativeName?.toi?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.tsn">- tsn:
+                        {{data?.name?.nativeName?.tsn?.official}} ( {{data?.name?.nativeName?.tsn?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.ven">- ven:
+                        {{data?.name?.nativeName?.ven?.official}} ( {{data?.name?.nativeName?.ven?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.xho">- xho:
+                        {{data?.name?.nativeName?.xho?.official}} ( {{data?.name?.nativeName?.xho?.common}})<br></span>
+                    <span style="padding-left: 90px;" *ngIf="data?.name?.nativeName?.zib">- zib:
+                        {{data?.name?.nativeName?.zib?.official}} ( {{data?.name?.nativeName?.zib?.common}})<br></span>
+                </div>
+                <div><b>Capital :</b><span> {{data?.capital}}</span> </div>
+                <div><b>Alt Spellings : </b>
+                    <span *ngFor="let item of data.altSpellings">{{item}} &ensp;;</span>
+                </div>
+                <div><b>Capital : </b>
+                    <span *ngFor="let capitals of data.capital"> {{capitals}}</span>
+                </div>
+                <div><b>Region : </b> {{data?.region}}</div>
+                <div><b>Continents : </b> {{data?.continents}}</div>
+                <div><b>Subregion : </b> {{data.subregion}}</div>
+                <div><b>Latitude and Longitude: </b> 
+                    <span *ngFor="let latlngs of data.latlng">{{latlngs}} &ensp;;</span>
+                </div>
+                <div><b>Area : </b> {{data.area}}</div>
+                <div><b>Population : </b> {{data.population}}</div>
+
+            </div>
+        </div>
+    </div>
+</mat-dialog-content>

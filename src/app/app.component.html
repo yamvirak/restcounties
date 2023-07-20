@@ -1,0 +1,173 @@
+<div>
+  <div class="content">
+    <div class="tab-content p-24">
+      <div class="header">
+        <h1>RestCountries</h1>
+      </div>
+      <div class="card-body">
+        <form (submit)="Search()" style="padding: 5px;">
+          <input class="form-control" type="text" name="countryName" [(ngModel)]="countryName"
+            placeholder="Enter Country Official Name">
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <!-- <table matSort (matSortChange)="sortData($event)"> -->
+      <table>
+        <thead>
+          <tr>
+            <th id="index">ID</th>
+            <th id="img"> Flags</th>
+            <th id="name" (click)="sort('name.official')"> Name &nbsp; <i class="fa fa-sort"></i></th>
+            <th id="cca2"> 2 character Country Code</th>
+            <th id="cca3"> 3 character Country Code </th>
+            <th id="nativeName"> Native Country Name </th>
+            <th id="spell"> Alternative Country Name </th>
+            <th id="code"> Country Calling Codes </th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+
+          <tr *ngFor="let row of data | orderBy: key: reverse  | paginate:{
+                itemsPerPage: tableSize,
+                currentPage: page,
+                totalItems: count
+                } ; let i = index;">
+            <td id="index">{{ i+1 }}</td>
+            <td id="img" style="text-align: center;"><img src="{{ row?.flags?.png }}" alt=""></td>
+            <td id="name" (click)="openViewForm(row)">Official: {{ row?.name?.official }} <br>Common: {{
+              row?.name?.common }}</td>
+            <td id="cca2">{{ row?.cca2 }}</td>
+            <td id="cca3">{{ row?.cca3 }}</td>
+            <td id="nativeName">
+              <span  *ngIf="row?.name.nativeName?.ara">- ara:
+                {{row?.name.nativeName?.ara?.official}} ( {{row?.name.nativeName?.ara?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.grn">- grn:
+                {{row?.name.nativeName?.grn?.official}} ( {{row?.name.nativeName?.grn?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.que">- que:
+                {{row?.name.nativeName?.que?.official}} ( {{row?.name.nativeName?.que?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.spa">- spa:
+                {{row?.name.nativeName?.spa?.official}} ( {{row?.name.nativeName?.spa?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.zho">- zho:
+                {{row?.name.nativeName?.zho?.official}} ( {{row?.name.nativeName?.zho?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.urd">- urd:
+                {{row?.name.nativeName?.urd?.official}} ( {{row?.name.nativeName?.urd?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.tur">- tur:
+                {{row?.name.nativeName?.tur?.official}} ( {{row?.name.nativeName?.tur?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.swe">- swe:
+                {{row?.name.nativeName?.swe?.official}} ( {{row?.name.nativeName?.swe?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.srp">- srp:
+                {{row?.name.nativeName?.srp?.official}} ( {{row?.name.nativeName?.srp?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.slk">- slk:
+                {{row?.name.nativeName?.slk?.official}} ( {{row?.name.nativeName?.slk?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.rus">- rus:
+                {{row?.name.nativeName?.rus?.official}} ( {{row?.name.nativeName?.rus?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.por">- por:
+                {{row?.name.nativeName?.por?.official}} ( {{row?.name.nativeName?.por?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.pol">- pol:
+                {{row?.name.nativeName?.pol?.official}} ( {{row?.name.nativeName?.pol?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.per">- per:
+                {{row?.name.nativeName?.per?.official}} ( {{row?.name.nativeName?.per?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.nld">- nld:
+                {{row?.name.nativeName?.nld?.official}} ( {{row?.name.nativeName?.nld?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.kor">- kor:
+                {{row?.name.nativeName?.kor?.official}} ( {{row?.name.nativeName?.kor?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.jpn">- jpn:
+                {{row?.name.nativeName?.jpn?.official}} ( {{row?.name.nativeName?.jpn?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.ita">- ita:
+                {{row?.name.nativeName?.ita?.official}} ( {{row?.name.nativeName?.ita?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.hun">- hun:
+                {{row?.name.nativeName?.hun?.official}} ( {{row?.name.nativeName?.hun?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.ita">- ita:
+                {{row?.name.nativeName?.ita?.official}} ( {{row?.name.nativeName?.ita?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.hrv">- hrv:
+                {{row?.name.nativeName?.hrv?.official}} ( {{row?.name.nativeName?.hrv?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.fra">- fra:
+                {{row?.name.nativeName?.fra?.official}} ( {{row?.name.nativeName?.fra?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.fin">- fin:
+                {{row?.name.nativeName?.fin?.official}} ( {{row?.name.nativeName?.fin?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.est">- est:
+                {{row?.name.nativeName?.est?.official}} ( {{row?.name.nativeName?.est?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.deu">- deu:
+                {{row?.name.nativeName?.deu?.official}} ( {{row?.name.nativeName?.deu?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.cym">- cym:
+                {{row?.name.nativeName?.cym?.official}} ( {{row?.name.nativeName?.cym?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.ces">- ces:
+                {{row?.name.nativeName?.ces?.official}} ( {{row?.name.nativeName?.ces?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.bre">- bre:
+                {{row?.name.nativeName?.bre?.official}} ( {{row?.name.nativeName?.bre?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.cat">- cat:
+                {{row?.name.nativeName?.cat?.official}} ( {{row?.name.nativeName?.cat?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.eng">- eng:
+                {{row?.name.nativeName?.eng?.official}} ( {{row?.name.nativeName?.eng?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.hye">- hye:
+                {{row?.name.nativeName?.hye?.official}} ( {{row?.name.nativeName?.hye?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.div">- div:
+                {{row?.name.nativeName?.div?.official}} ( {{row?.name.nativeName?.div?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.smo">- smo:
+                {{row?.name.nativeName?.smo?.official}} ( {{row?.name.nativeName?.smo?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.mkd">- mkd:
+                {{row?.name.nativeName?.mkd?.official}} ( {{row?.name.nativeName?.mkd?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.amh">- amh:
+                {{row?.name.nativeName?.amh?.official}} ( {{row?.name.nativeName?.amh?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.kal">- kal:
+                {{row?.name.nativeName?.kal?.official}} ( {{row?.name.nativeName?.kal?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.arc">- arc:
+                {{row?.name.nativeName?.arc?.official}} ( {{row?.name.nativeName?.arc?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.ckb">- ckb:
+                {{row?.name.nativeName?.ckb?.official}} ( {{row?.name.nativeName?.ckb?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.aym">- aym:
+                {{row?.name.nativeName?.aym?.official}} ( {{row?.name.nativeName?.aym?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.cha">- cha:
+                {{row?.name.nativeName?.cha?.official}} ( {{row?.name.nativeName?.cha?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.bwg">- bwg:
+                {{row?.name.nativeName?.bwg?.official}} ( {{row?.name.nativeName?.bwg?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.kck">- kck:
+                {{row?.name.nativeName?.kck?.official}} ( {{row?.name.nativeName?.kck?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.khi">- khi:
+                {{row?.name.nativeName?.khi?.official}} ( {{row?.name.nativeName?.khi?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.nde">- nde:
+                {{row?.name.nativeName?.nde?.official}} ( {{row?.name.nativeName?.nde?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.nya">- nya:
+                {{row?.name.nativeName?.nya?.official}} ( {{row?.name.nativeName?.nya?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.sna">- sna:
+                {{row?.name.nativeName?.sna?.official}} ( {{row?.name.nativeName?.sna?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.sot">- sot:
+                {{row?.name.nativeName?.sot?.official}} ( {{row?.name.nativeName?.sot?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.toi">- toi:
+                {{row?.name.nativeName?.toi?.official}} ( {{row?.name.nativeName?.toi?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.tsn">- tsn:
+                {{row?.name.nativeName?.tsn?.official}} ( {{row?.name.nativeName?.tsn?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.ven">- ven:
+                {{row?.name.nativeName?.ven?.official}} ( {{row?.name.nativeName?.ven?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.xho">- xho:
+                {{row?.name.nativeName?.xho?.official}} ( {{row?.name.nativeName?.xho?.common}})<br></span>
+              <span  *ngIf="row?.name.nativeName?.zib">- zib:
+                {{row?.name.nativeName?.zib?.official}} ( {{row?.name.nativeName?.zib?.common}})<br></span>
+            </td>
+            <td id="spell">
+              <span *ngFor="let spelling of row?.altSpellings ">
+                {{spelling}}<br>
+              </span>
+            </td>
+            <td id="code">
+              <span *ngFor="let suffixes of row?.idd?.suffixes ">
+                {{suffixes}}
+              </span>
+              <!-- {{row?.idd?.root}} -->
+            </td>
+          </tr>
+
+        </tbody>
+
+      </table>
+      <div style="text-align: end;font-size: 16px;">
+        <pagination-controls previousLabel="Prev" nextLabel="Next"
+          (pageChange)="onPageChanged($event)"></pagination-controls>
+      </div><br><br>
+
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,76 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  img{
+    width: 50%;
+  }
+  th{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: medium;
+    text-align: center;
+    background-color: rgb(186 186 205);
+    color:#000
+  }
+  input{
+    height: 35px;
+    width: 37%;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+  form button{
+    height: 41px;
+    font-size: 16px;
+    border-radius: 10px;
+    width: 10%;
+    margin-left: 15px;
+  }
+  .header{
+    background: #4bc9c3;
+    height: 65px;
+    color: #fff;
+    text-align: center;
+
+  }
+  .header h1{
+    padding-top: 21px;
+  }
+  .mat-sort-header-container {
+    align-items: center;
+  }
+
+table {
+
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+th, td { /* cell */
+  padding: 0.75rem;
+  font-size: 0.9375rem;
+}
+
+th { /* header cell */
+  font-weight: 700;
+  text-align: center;
+  color: #272838;
+  border-bottom: 2px solid #EB9486;
+
+  position: sticky;
+  top: 0;
+  background-color: #F9F8F8;
+}
+
+
