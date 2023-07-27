@@ -80,7 +80,7 @@ export class AppComponent {
         this._service.get('https://restcountries.com/v3.1/name/'+this.countryName).subscribe(
           (res: any) => {
             this.data = res;
-            console.log(this.data.length);
+            console.log(this.data);
           },
           (error: any) => {
             console.error(error);
