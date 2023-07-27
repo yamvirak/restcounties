@@ -56,11 +56,11 @@ export class AppComponent {
     this.listing();
   }
 
-  onPageSizeChanged(event: any): void {
-    this.tableSize = event.target.value;
-    this.page = 1;
-    this.listing();
-  }
+  // onPageSizeChanged(event: any): void {
+  //   this.tableSize = event.target.value;
+  //   this.page = 1;
+  //   this.listing();
+  // }
 
   openViewForm(row: any = null): void {
     const dialogRef = this._dialog.open(ViewComponent, { data: row });
@@ -80,6 +80,7 @@ export class AppComponent {
         this._service.get('https://restcountries.com/v3.1/name/'+this.countryName).subscribe(
           (res: any) => {
             this.data = res;
+            console.log(this.data.length);
           },
           (error: any) => {
             console.error(error);
